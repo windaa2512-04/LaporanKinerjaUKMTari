@@ -1,0 +1,296 @@
+/* Reset dan pengaturan dasar */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    height: 100vh;
+    background-image: url('bg.jpg');
+    background-size: cover;
+    background-attachment: fixed; /* Agar background tetap saat scrolling */
+    background-repeat: no-repeat;
+    transition: background-color 0.5s ease; /* Transisi untuk perubahan warna latar belakang */
+}
+.header {
+    display: flex;
+    justify-content: space-between; /* Elemen di kiri dan kanan */
+    align-items: center;
+    padding: 10px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Mengatur tinggi sesuai layar */
+    text-align: center;
+    background-color: #ffe6f0; /* Warna pink lembut */
+}
+
+
+
+/* Efek hover pada ikon edit */
+.edit img {
+    position: absolute; /* Atur posisi absolut */
+    top: 10px;          /* Jarak dari atas */
+    right: 10px;        /* Jarak dari kanan */
+    width: 40px;        /* Ukuran ikon */
+    height: 40px;
+    cursor: pointer;    /* Menambahkan pointer saat hover */
+    transition: transform 0.3s; /* Transisi untuk efek zoom */
+}
+
+.edit img:hover {
+    transform: scale(1.1); /* Zoom in saat hover */
+}
+
+/* Sidebar */
+.sidebar {
+    width: 15%;
+    height: 100%;
+    background-color: #ef7b7b;
+    opacity: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Ubah dari 50px ke flex-start */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    transition: background-color 0.3s; /* Transisi untuk perubahan warna */
+}
+
+.sidebar:hover {
+    background-color: #e57373; /* Warna sidebar lebih gelap saat hover */
+}
+
+.menu-item {
+    text-align: center;
+    margin: 80px 0;
+}
+
+.menu-item a {
+    text-decoration: none;
+    color: #000000;
+    transition: color 0.3s; /* Transisi untuk perubahan warna teks */
+}
+
+.menu-item a:hover {
+    color: #a35656; /* Warna teks saat hover */
+}
+
+.menu-item img {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 10px;
+    transition: transform 0.3s; /* Transisi untuk efek zoom */
+}
+
+.menu-item img:hover {
+    transform: scale(1.1); /* Zoom in saat hover */
+}
+
+.menu-logout img {
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+.menu-logout {
+    margin-top: auto;
+    font-style: normal;
+    font-weight: bold;
+    display: flex;
+    margin-right: 18px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Menghilangkan garis bawah pada tautan */
+.menu-logout a {
+    text-decoration: none; /* Hilangkan garis bawah */
+    color: #000000;       /* Warna teks */
+    margin-top: 10px;
+    font-weight: bold;
+    transition: color 0.3s; /* Transisi untuk perubahan warna */
+}
+
+.menu-logout a:hover {
+    color: #964848; /* Warna saat hover */
+}
+
+.menu-item p {
+    font-size: 1em;
+    color: #000000;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Main Content */
+.main-content {
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+
+}
+
+
+.profile {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.text {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center;
+    background-color: #c0689c;
+    color: white;
+    border-radius: 25px;
+    padding: 10px 20px;
+    margin: 10px 0;
+    font-size: 20px;
+    font-weight: bold;
+    width: 200px;
+    text-align: center;
+}
+.text:hover {
+    color: #f7b3d0; /* Warna saat hover */
+}
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #d5006d;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.info {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.info-item {
+    margin: 10px 0;
+    font-weight: bold;
+    font-size: 18px;
+    color: #d5006d; /* Warna teks */
+    transition: color 0.3s;
+}
+
+.info-item:hover {
+    color: #b0004d; /* Warna saat hover */
+}
+
+.logout-item {
+    background-color: #a31e1e; /* Ganti dengan warna yang Anda inginkan */
+    width: 100%; /* Pastikan lebar sesuai dengan sidebar */
+    padding: 10px; /* Tambahkan padding jika perlu */
+    margin-top: auto; /* Pastikan tetap di bagian bawah */
+    text-align: center; /* Rata tengah teks */
+    transition: background-color 0.3s; /* Transisi untuk perubahan warna */
+}
+/* Container untuk tombol pengumuman */
+.announcement-container {
+    position: fixed;
+    bottom: 10px; /* Jarak dari bawah */
+    right: 10px; /* Jarak dari kanan */
+    z-index: 999; /* Pastikan berada di atas elemen lain */
+}
+
+/* Tombol pengumuman */
+.announcement-button {
+    background-color: #a84242;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.announcement-button:hover {
+    background-color: #8f3737;
+    transform: scale(1.05);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4); /* Latar belakang gelap transparan */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: auto;
+    padding: 15px;
+    border-radius: 8px;
+    width: 50%; /* Ukuran modal lebih kecil */
+    max-height: 70%; /* Maksimal tinggi modal */
+    overflow-y: auto; /* Gulir jika konten terlalu panjang */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 14px; /* Ukuran font lebih kecil */
+    line-height: 1.6; /* Jarak antar-baris lebih rapi */
+}
+
+/* Judul modal */
+.modal-content h3 {
+    font-size: 18px; /* Ukuran judul lebih kecil */
+    margin-bottom: 10px;
+    text-align: center;
+    color: #333;
+}
+
+/* Kartu rapat */
+.meeting-card {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.meeting-card h4 {
+    font-size: 16px; /* Ukuran judul rapat lebih kecil */
+    margin-bottom: 5px;
+    color: #444;
+}
+
+.meeting-card p {
+    font-size: 13px; /* Ukuran teks lebih kecil */
+    margin: 5px 0;
+    color: #555;
+}
+
+/* Tombol tutup */
+.modal-content button {
+    background-color: #a84242;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    display: block;
+    margin: 10px auto 0;
+    transition: background-color 0.3s ease;
+}
+
+.modal-content button:hover {
+    background-color: #8f3737;
+}
